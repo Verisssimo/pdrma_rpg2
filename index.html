@@ -1,1 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+  body {
+    background-color: black;
+    font-family: "Times New Roman", Times, serif;
+    color: white;
+    font-size: 72px;
+    text-align: center;
+    padding: 100px;
+  }
+  input {
+    padding: 10px;
+    font-size: 24px;
+  }
+</style>
+<title>Identificação do Usuário</title>
+</head>
+<body>
+  <label for="username">Digite sua identificação:</label>
+  <input type="text" id="username" placeholder="Digite aqui">
+  <button onclick="checkIdentification()">Enviar</button>
 
+  <script>
+    function checkIdentification() {
+      const username = document.getElementById("username").value.toLowerCase();
+      switch (username) {
+        case "will":
+          window.location.href = "pagina2.html";
+          break;
+        case "lvdovico":
+          window.location.href = "pagina3.html";
+          break;
+        case "nicolas":
+          window.location.href = "pagina4.html";
+          break;
+        case "bia":
+          window.location.href = "pagina5.html";
+          break;
+        case "manuel":
+          window.location.href = "pagina6.html";
+          break;
+        case "nollan":
+          window.location.href = "pagina7.html";
+          break;
+        case "sara":
+          window.location.href = "pagina8.html";
+          break;
+        case "aquiles":
+          window.location.href = "pagina9.html";
+          break;
+        case "mateus":
+          window.location.href = "pagina10.html";
+          break;
+        default:
+          alert("Identificação não reconhecida.");
+          break;
+      }
+    }
+  </script>
+</body>
+</html>
