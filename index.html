@@ -3,75 +3,54 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Identificação do Usuário</title>
 <style>
   body {
-    background-color: white;
-    color: black;
-    font-family: "Times New Roman", serif;
-    font-size: 22px;
+    background-color: #333;
+    margin: 0;
+    padding: 0;
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
-    margin: 0;
+    min-height: 100vh;
+    font-family: 'Times New Roman', serif;
   }
 
-  #identificationBox {
-    background-color: white;
-    border-radius: 10px;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+  .container {
+    background-color: #111;
+    color: white;
     padding: 20px;
-    width: 300px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+    width: 400px;
     text-align: center;
   }
 
+  .identification {
+    font-size: 22px;
+    margin-bottom: 20px;
+  }
+
   input {
-    width: 100%;
     padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    margin-bottom: 10px;
-  }
-
-  #submitBtn {
-    background-color: transparent;
+    width: 100%;
+    font-size: 16px;
     border: none;
-    cursor: pointer;
+    border-radius: 5px;
   }
 
-  #submitIcon {
-    width: 20px;
-    height: 20px;
-    fill: #007bff;
+  input:focus {
+    outline: none;
+    box-shadow: 0px 0px 5px rgba(255, 255, 255, 0.8);
   }
 </style>
+<title>Pedido de Identificação</title>
 </head>
 <body>
-  <div id="identificationBox">
-    <label for="username">Digite sua identificação:</label>
-    <input type="text" id="username" placeholder="Digite seu nome">
-    <button id="submitBtn">
-      <svg id="submitIcon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
-        <path d="M7.293 16.293a1 1 0 011.414 0l5 5a1 1 0 01-1.414 1.414l-5-5a1 1 0 010-1.414z"/>
-        <path d="M8 2a1 1 0 012 0v11a1 1 0 11-2 0V2z"/>
-      </svg>
-    </button>
+  <div class="container">
+    <div class="identification">
+      Por favor, insira sua identificação:
+    </div>
+    <input type="text" placeholder="Identificação">
   </div>
-
-  <script>
-    const submitButton = document.getElementById("submitBtn");
-
-    submitButton.addEventListener("click", () => {
-      const usernameInput = document.getElementById("username");
-      const username = usernameInput.value;
-
-      if (username.trim() !== "") {
-        alert(`Identificação enviada: ${username}`);
-      } else {
-        alert("Por favor, insira sua identificação.");
-      }
-    });
-  </script>
 </body>
 </html>
