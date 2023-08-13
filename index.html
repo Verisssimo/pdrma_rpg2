@@ -1,20 +1,63 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="styles.css">
-  <title>:)</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>:)</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+  }
+  .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  #nameInput {
+    padding: 10px;
+    font-size: 16px;
+  }
+  #submitBtn {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+  }
+</style>
 </head>
 <body>
-  <div class="container">
-    <div class="identification">
-      Identificação:
-    </div>
-    <input type="text" id="nameInput" placeholder="insira sua identificação aqui">
-    <button onclick="checkName()">Enviar</button>
-  </div>
+<div class="container">
+  <form id="identificationForm">
+    <label for="nameInput">Digite sua identificação:</label>
+    <input type="text" id="nameInput" required>
+    <button type="submit" id="submitBtn">Enviar</button>
+  </form>
+</div>
 
-  <script src="script.js"></script>
+<script>
+  document.getElementById("identificationForm").addEventListener("submit", function(event) {
+    event.preventDefault();
+    var name = document.getElementById("nameInput").value.toLowerCase();
+
+    if (name === "mateus" || name === "lvdovico") {
+      window.location.href = "pagina2.html";
+    } else if (name === "aquiles" || name === "nicolas") {
+      window.location.href = "pagina3.html";
+    } else if (name === "nollan" || name === "will") {
+      window.location.href = "pagina4.html";
+    } else if (name === "manuel") {
+      window.location.href = "pagina5.html";
+    } else if (name === "sara") {
+      window.location.href = "pagina6.html";
+    } else if (name === "bia") {
+      window.location.href = "crisalidas.html";
+    } else {
+      alert("Identificação inválida.");
+    }
+  });
+</script>
 </body>
 </html>
