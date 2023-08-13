@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+  body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background-color: black;
+  }
+  
+  .text-container {
+    text-align: center;
+  }
+  
+  .purple-text {
+    font-family: "Times New Roman", serif;
+    font-size: 72px;
+    color: purple;
+    background-color: black;
+    padding: 10px;
+  }
+</style>
+<title>:)</title>
+</head>
+<body>
+  <div class="text-container">
+    <p class="purple-text">O Protetor dos Oprimidos</p>
+    <p class="purple-text" id="timer"></p>
+  </div>
+  
+  <script>
+ 
+    var targetDate = new Date('2023-08-17T12:00:00');
+    
+    function updateTimer() {
+      var currentDate = new Date();
+      var timeDifference = targetDate - currentDate;
+      
+      if (timeDifference > 0) {
+        var days = Math.floor(timeDifference / (1000 * 60 * 60 * 24));
+        var hours = Math.floor((timeDifference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        var minutes = Math.floor((timeDifference % (1000 * 60 * 60)) / (1000 * 60));
+        var seconds = Math.floor((timeDifference % (1000 * 60)) / 1000);
+        
+        document.getElementById('timer').textContent = `Contagem regressiva: ${days}d ${hours}h ${minutes}m ${seconds}s`;
+      } else {
+        document.getElementById('timer').textContent = 'Tempo esgotado!';
+      }
+    }
+    
+    
+    setInterval(updateTimer, 1000);
+    
+    updateTimer();
+  </script>
+</body>
+</html>
