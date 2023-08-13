@@ -18,7 +18,7 @@ function checkName() {
   } else if (name === "sara") {
     window.location.href = "pagina6.html";
   } else if (name === "bia") {
-    window.location.href = "crisalidas_de_ferro.html";
+    window.location.href = "crisalidas.html";
   } else  {
     // Tratamento para outros nomes ou ações
     alert("Identificação inválida.");
