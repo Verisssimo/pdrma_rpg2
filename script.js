@@ -1,16 +1,26 @@
 function checkName() {
-  var name = document.getElementById("nameInput").value.toLowerCase();
+  var name = document.getElementById("nameInpmaut").value.toLowerCase();
 
-  if (name === "gabriel") {
+  if (name === "mateus") {
     window.location.href = "pagina2.html";
-  } else if (name === "sarah") {
+  } else if (name === "lvdovico") {
+    window.location.href = "pagina2.html";
+  } else if (name === "aquiles") {
     window.location.href = "pagina3.html";
-  } else if (name === "nome3") {
+  } else if (name === "nicolas") {
+    window.location.href = "pagina3.html";
+  } else if (name === "nollan") {
     window.location.href = "pagina4.html";
-  } else if (name === "nome4") {
+  } else if (name === "will") {
+    window.location.href = "pagina4.html";
+  } else if (name === "manuel") {
     window.location.href = "pagina5.html";
-  } else {
+  } else if (name === "sara") {
+    window.location.href = "pagina6.html";
+  } else if (name === "bia") {
+    window.location.href = "pagina7.html";
+  } else  {
     // Tratamento para outros nomes ou ações
-    alert("Nome não reconhecido. Tente novamente.");
+    alert("Identificação inválida.");
   }
 }
