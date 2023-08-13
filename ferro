@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+  body {
+    background-color: black;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+
+  p {
+    font-family: "Times New Roman", Times, serif;
+    font-size: 72px;
+    color: white;
+    text-align: center;
+  }
+</style>
+<title>Você está no lugar certo?</title>
+</head>
+<body>
+  <p>Você está no lugar certo?</p>
+</body>
+</html>
